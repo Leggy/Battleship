@@ -1,0 +1,43 @@
+Battleship Game
+
+Resource Descriptions:
+	Board:
+		
+	Fleet:
+	
+	Matrix:
+	
+	Point:
+	
+	
+Boards:
+	Status Board:
+		The Status Board maintains the status of the player's fleet
+		(that is what fleet units are where, and where the opposition has
+		fired upon so far), and is linked to the opposition's Radar Board.
+		
+	Radar Board:
+		The Radar Board is the board on which targets are called, and
+		confirmed as either hits or misses. It maintains the player's
+		intelligence of the oppoisition's fleet disposition.
+		
+	AI Radar Board:
+		The AI Radar Board is facilitates all the functions of the Radar Board,
+		as well as being able to calculate the mathematical probability of any
+		grid having a ship at it.
+		
+		
+Radar Board:
+	Player selects target grid to fire upon
+	If grid has not been fired upon, proceeds with firing
+	Sends firing command to Opposition's Status Board, which replies with
+		success/failure boolean
+	Updates Radar Board with new information
+	
+	
+Game Setup:
+	Initialise Status Boards for both players
+		Both players setup their fleets on the board (or maybe opt for a random
+		fleet arrangement)
+	Initialise Radar Boards for both players
+	Link Radar Board to Opposition's Status Board
